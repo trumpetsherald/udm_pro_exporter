@@ -6,3 +6,5 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: "no"
+    ports:
+      - 9182:9182
