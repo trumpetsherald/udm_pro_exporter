@@ -1,7 +1,6 @@
 package unifiapi
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/prometheus/client_golang/prometheus"
@@ -46,7 +45,6 @@ func (collector *UDMProCollector) CollectDeviceMetrics(ch chan<- prometheus.Metr
 
 	if len(deviceResponse.Data) > 0 {
 		device := deviceResponse.Data[0]
-		fmt.Println(device)
 
 		for _, temp := range device.Temperatures {
 			ch <- prometheus.MustNewConstMetric(
