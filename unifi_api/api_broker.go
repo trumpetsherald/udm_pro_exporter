@@ -122,6 +122,8 @@ func (api *APIBroker) Logout() (int, error) {
 
 	if resp.StatusCode != 200 {
 		log.Println("Logout Request failed.")
+	} else {
+		log.Println("Logout Request succeeded.")
 	}
 
 	return resp.StatusCode, nil
