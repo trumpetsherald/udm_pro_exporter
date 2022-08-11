@@ -97,6 +97,7 @@ type SpeedTestStatus struct {
 }
 
 type Device struct {
+	Name             string                 `json:"name"`
 	IP               string                 `json:"ip"`
 	MAC              string                 `json:"mac"`
 	Version          string                 `json:"version"`
